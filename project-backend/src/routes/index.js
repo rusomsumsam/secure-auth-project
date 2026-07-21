@@ -1,9 +1,10 @@
 const express = require("express");
 const router = express.Router();
 
-const authRoutes = require("./auth.routes");
+const insecureRoutes = require("./insecure.routes");
+const secureRoutes = require("./secure.routes");
 
-// combine routes
-router.use("/auth", authRoutes);
+router.use("/insecure", insecureRoutes);
+router.use("/secure", secureRoutes);
 
 module.exports = router;

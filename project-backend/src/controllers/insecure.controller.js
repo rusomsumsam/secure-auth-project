@@ -1,9 +1,9 @@
-const User = require("../models/User");
+const InsecureUser = require("../models/InsecureUser");
 
 const register = async (req, res) => {
     const { username, email, password } = req.body;
 
-    const user = new User({
+    const user = new InsecureUser({
         username,
         email,
         password,
@@ -11,21 +11,21 @@ const register = async (req, res) => {
 
     await user.save();
 
-    res.send("User registered ✅");
+    res.send("Insecure User Registered ✅");
 };
 
 const login = async (req, res) => {
     const { email, password } = req.body;
 
-    const user = await User.findOne({
+    const user = await InsecureUser.findOne({
         email,
         password,
     });
 
     if (user) {
-        res.send("Login SUCCESS ✅");
+        res.send("Insecure Login Success ✅");
     } else {
-        res.send("Login FAILED ❌");
+        res.send("Insecure Login Failed ❌");
     }
 };
 
