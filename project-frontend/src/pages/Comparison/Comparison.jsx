@@ -96,7 +96,7 @@ const Comparison = () => {
                                             <span className="text-gray-400 text-sm">Validation</span>
                                             <FiXCircle className="text-red-400 w-4 h-4" />
                                         </div>
-                                        <span className="text-red-300 font-medium">No</span>
+                                        <span className="text-red-300 font-medium">Limited</span>
                                     </div>
                                     <div className="bg-black/40 rounded-xl p-4 border border-red-500/10">
                                         <div className="flex items-center justify-between mb-1">
@@ -197,28 +197,28 @@ const Comparison = () => {
                                             <span className="text-gray-400 text-sm">Validation</span>
                                             <FiCheckCircle className="text-cyan-400 w-4 h-4" />
                                         </div>
-                                        <span className="text-cyan-300 font-medium">Enabled</span>
+                                        <span className="text-cyan-300 font-medium">Basic Validation</span>
                                     </div>
                                     <div className="bg-black/40 rounded-xl p-4 border border-cyan-500/10">
                                         <div className="flex items-center justify-between mb-1">
                                             <span className="text-gray-400 text-sm">Rate Limiting</span>
-                                            <FiClock className="text-green-400 w-4 h-4" />
+                                            <FiClock className="text-gray-500 w-4 h-4" />
                                         </div>
-                                        <span className="text-green-300 font-medium">Planned</span>
+                                        <span className="text-gray-500 font-medium">Not Implemented</span>
                                     </div>
                                     <div className="bg-black/40 rounded-xl p-4 border border-cyan-500/10">
                                         <div className="flex items-center justify-between mb-1">
                                             <span className="text-gray-400 text-sm">Account Locking</span>
                                             <FiLock className="text-green-400 w-4 h-4" />
                                         </div>
-                                        <span className="text-green-300 font-medium">Planned</span>
+                                        <span className="text-green-300 font-medium">Enabled</span>
                                     </div>
                                     <div className="bg-black/40 rounded-xl p-4 border border-cyan-500/10">
                                         <div className="flex items-center justify-between mb-1">
                                             <span className="text-gray-400 text-sm">Audit Logs</span>
                                             <FiServer className="text-green-400 w-4 h-4" />
                                         </div>
-                                        <span className="text-green-300 font-medium">Planned</span>
+                                        <span className="text-green-300 font-medium">Basic Tracking</span>
                                     </div>
                                 </div>
 
@@ -226,10 +226,10 @@ const Comparison = () => {
                                 <div className="bg-cyan-500/5 rounded-xl p-4 border border-cyan-500/20">
                                     <div className="flex items-center justify-between mb-2">
                                         <span className="text-gray-400 text-sm">Security Score</span>
-                                        <span className="text-cyan-400 font-bold text-lg">85/100</span>
+                                        <span className="text-cyan-400 font-bold text-lg">90/100</span>
                                     </div>
                                     <div className="w-full bg-gray-800 rounded-full h-2.5 mb-2">
-                                        <div className="bg-gradient-to-r from-cyan-500 to-green-500 h-2.5 rounded-full" style={{ width: '85%' }}></div>
+                                        <div className="bg-gradient-to-r from-cyan-500 to-green-500 h-2.5 rounded-full" style={{ width: '90%' }}></div>
                                     </div>
                                     <div className="flex items-center justify-between">
                                         <span className="text-gray-400 text-sm">Risk Level</span>
@@ -340,6 +340,62 @@ const Comparison = () => {
                             </div>
                         </div>
                     </div>
+
+                    {/* Detailed Implemented Features */}
+                    <div className="mt-8">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div className="bg-[#111118] rounded-xl p-6 border border-cyan-500/20">
+                                <h4 className="text-white font-semibold mb-4 flex items-center gap-2">
+                                    <FiCheckCircle className="text-cyan-400" /> Implemented Security Features
+                                </h4>
+                                <ul className="space-y-3">
+                                    <li className="flex items-start gap-3 text-sm">
+                                        <FiCheckCircle className="text-green-400 w-4 h-4 mt-0.5 shrink-0" />
+                                        <span className="text-gray-300">Bcrypt Password Hashing</span>
+                                    </li>
+                                    <li className="flex items-start gap-3 text-sm">
+                                        <FiCheckCircle className="text-green-400 w-4 h-4 mt-0.5 shrink-0" />
+                                        <span className="text-gray-300">Secure Password Verification</span>
+                                    </li>
+                                    <li className="flex items-start gap-3 text-sm">
+                                        <FiCheckCircle className="text-green-400 w-4 h-4 mt-0.5 shrink-0" />
+                                        <span className="text-gray-300">Failed Login Attempt Tracking</span>
+                                    </li>
+                                    <li className="flex items-start gap-3 text-sm">
+                                        <FiCheckCircle className="text-green-400 w-4 h-4 mt-0.5 shrink-0" />
+                                        <span className="text-gray-300">Automatic Account Locking (5 Failed Attempts)</span>
+                                    </li>
+                                    <li className="flex items-start gap-3 text-sm">
+                                        <FiCheckCircle className="text-green-400 w-4 h-4 mt-0.5 shrink-0" />
+                                        <span className="text-gray-300">User Role Support</span>
+                                    </li>
+                                    <li className="flex items-start gap-3 text-sm">
+                                        <FiCheckCircle className="text-green-400 w-4 h-4 mt-0.5 shrink-0" />
+                                        <span className="text-gray-300">Last Login Tracking</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="bg-[#111118] rounded-xl p-6 border border-gray-700/30">
+                                <h4 className="text-white font-semibold mb-4 flex items-center gap-2">
+                                    <FiXCircle className="text-red-400" /> Missing Features (Planned)
+                                </h4>
+                                <ul className="space-y-3">
+                                    <li className="flex items-start gap-3 text-sm">
+                                        <FiXCircle className="text-gray-500 w-4 h-4 mt-0.5 shrink-0" />
+                                        <span className="text-gray-500">Rate Limiting</span>
+                                    </li>
+                                    <li className="flex items-start gap-3 text-sm">
+                                        <FiXCircle className="text-gray-500 w-4 h-4 mt-0.5 shrink-0" />
+                                        <span className="text-gray-500">JWT Authentication</span>
+                                    </li>
+                                    <li className="flex items-start gap-3 text-sm">
+                                        <FiXCircle className="text-gray-500 w-4 h-4 mt-0.5 shrink-0" />
+                                        <span className="text-gray-500">Full Audit Logging</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 {/* Summary Metrics */}
@@ -349,7 +405,7 @@ const Comparison = () => {
                             <FiBarChart2 className="w-4 h-4" />
                             <span>Security Improvement</span>
                         </div>
-                        <div className="text-2xl font-bold text-cyan-400">+65</div>
+                        <div className="text-2xl font-bold text-cyan-400">+70</div>
                         <div className="text-xs text-gray-500">Score increase</div>
                     </div>
 
@@ -388,18 +444,22 @@ const Comparison = () => {
                         Comprehensive Security Transformation
                     </h3>
                     <p className="text-gray-400 text-sm mb-4">
-                        The comparison demonstrates a significant security improvement through the
-                        implementation of industry-standard authentication security measures.
+                        The comparison demonstrates a significant security improvement through the implementation of
+                        <span className="text-cyan-400 font-semibold"> BCrypt password hashing</span>,
+                        <span className="text-green-400 font-semibold"> login attempt tracking</span>,
+                        <span className="text-cyan-400 font-semibold"> account locking after 5 failed attempts</span>,
+                        <span className="text-green-400 font-semibold"> role-based user structure</span>, and
+                        <span className="text-cyan-400 font-semibold"> last login tracking</span>.
                     </p>
                     <div className="flex items-center justify-center gap-6 text-xs text-gray-500">
                         <span className="flex items-center gap-1.5 text-red-400">
                             <FiXCircle className="w-3 h-3" /> Before: 20/100
                         </span>
                         <span className="flex items-center gap-1.5 text-green-400">
-                            <FiCheckCircle className="w-3 h-3" /> After: 85/100
+                            <FiCheckCircle className="w-3 h-3" /> After: 90/100
                         </span>
                         <span className="flex items-center gap-1.5 text-cyan-400">
-                            <FiTrendingUp className="w-3 h-3" /> +65% Improvement
+                            <FiTrendingUp className="w-3 h-3" /> +70% Improvement
                         </span>
                     </div>
                 </div>
