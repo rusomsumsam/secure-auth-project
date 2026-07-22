@@ -13,7 +13,8 @@ import {
     FiAlertCircle,
     FiTrendingUp,
     FiShieldOff,
-    FiActivity
+    FiActivity,
+    FiHome
 } from 'react-icons/fi';
 import { FaShieldAlt, FaCheck, FaShieldVirus, FaLock, FaUserShield } from 'react-icons/fa';
 
@@ -27,6 +28,13 @@ const SecureHome = () => {
             </div>
 
             <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+                <Link
+                    to="/"
+                    className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors mb-8"
+                >
+                    <FiHome className="w-4 h-4" />
+                    <span>Back to Home</span>
+                </Link>
                 {/* Hero Section */}
                 <div className="relative mb-16 lg:mb-24">
                     <div className="absolute -inset-4 bg-gradient-to-r from-cyan-500/20 to-green-500/20 blur-3xl opacity-30" />
@@ -84,14 +92,14 @@ const SecureHome = () => {
                             </div>
                             <div className="flex items-center justify-between">
                                 <span className="text-gray-400">Security Score</span>
-                                <span className="text-green-400 font-bold text-lg">95/100</span>
+                                <span className="text-green-400 font-bold text-lg">90/100</span>
                             </div>
                             <div className="flex items-center justify-between">
                                 <span className="text-gray-400">Protection Status</span>
                                 <span className="text-green-500 font-bold text-lg">Active</span>
                             </div>
                             <div className="w-full bg-gray-800 rounded-full h-2.5">
-                                <div className="bg-gradient-to-r from-cyan-500 to-green-500 h-2.5 rounded-full" style={{ width: '95%' }}></div>
+                                <div className="bg-gradient-to-r from-cyan-500 to-green-500 h-2.5 rounded-full" style={{ width: '90%' }}></div>
                             </div>
                         </div>
                     </div>
@@ -101,7 +109,7 @@ const SecureHome = () => {
                         <div className="space-y-3">
                             <div className="flex items-center justify-between">
                                 <span className="text-gray-400 text-sm">Security Controls</span>
-                                <span className="text-cyan-400 font-medium">12</span>
+                                <span className="text-cyan-400 font-medium">7</span>
                             </div>
                             <div className="flex items-center justify-between">
                                 <span className="text-gray-400 text-sm">Vulnerabilities</span>
@@ -174,8 +182,8 @@ const SecureHome = () => {
                                     <FiLock className="text-cyan-400 text-xl" />
                                 </div>
                                 <div>
-                                    <h4 className="text-white font-medium mb-1">Authentication Hardening</h4>
-                                    <p className="text-sm text-gray-400">Multiple security layers including input sanitization, output encoding, and secure session management.</p>
+                                    <h4 className="text-white font-medium mb-1">Account Locking Protection</h4>
+                                    <p className="text-sm text-gray-400">Automatically locks accounts after five failed login attempts to prevent brute-force attacks.</p>
                                 </div>
                             </div>
                         </div>
@@ -227,8 +235,9 @@ const SecureHome = () => {
                                     <FiLock className="text-green-400 text-xl" />
                                 </div>
                                 <div>
-                                    <h4 className="text-white font-medium mb-1">Account Locking</h4>
-                                    <p className="text-sm text-gray-400">Temporarily lock user accounts after multiple failed login attempts to prevent unauthorized access.</p>
+                                    <h4 className="text-white font-medium mb-1">Full Audit Logging</h4>
+                                    <p className="text-sm text-gray-400">Comprehensive logging of authentication activities for advanced monitoring and incident response.
+</p>
                                 </div>
                             </div>
                         </div>

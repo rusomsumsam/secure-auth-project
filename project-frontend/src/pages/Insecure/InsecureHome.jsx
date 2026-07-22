@@ -1,20 +1,19 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import {
     FiAlertTriangle,
     FiShieldOff,
     FiLock,
     FiUnlock,
-    FiXCircle,
     FiArrowRight,
     FiAlertCircle,
     FiClock,
     FiUserX,
     FiDatabase,
     FiServer,
-    FiCode
+    FiCode,
+    FiHome
 } from 'react-icons/fi';
-import { FaSkull, FaExclamationTriangle, FaShieldAlt, FaBug } from 'react-icons/fa';
+import { FaSkull,FaBug } from 'react-icons/fa';
 
 const InsecureHome = () => {
     return (
@@ -26,6 +25,13 @@ const InsecureHome = () => {
             </div>
 
             <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+                <Link
+                    to="/"
+                    className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors mb-8 group"
+                >
+                    <FiHome className="w-4 h-4" />
+                    <span>Back to Home</span>
+                </Link>
                 {/* Hero Section */}
                 <div className="relative mb-16 lg:mb-24">
                     <div className="absolute -inset-4 bg-gradient-to-r from-red-500/20 to-red-600/20 blur-3xl opacity-30" />
