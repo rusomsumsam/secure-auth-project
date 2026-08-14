@@ -5,6 +5,8 @@ project-backend/node_modules/
 
 # Environment variables
 .env
+.env.*
+!.env.example
 project-frontend/.env
 project-backend/.env
 
@@ -19,3 +21,6 @@ project-backend/dist/
 # OS and editor files
 .DS_Store
 .vscode/
+
+cookies.txt
+**/cookies.txt
