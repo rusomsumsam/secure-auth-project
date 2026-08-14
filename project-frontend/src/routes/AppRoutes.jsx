@@ -8,6 +8,8 @@ import InsecureRegister from "../pages/Insecure/InsecureRegister";
 import InsecureLogin from "../pages/Insecure/InsecureLogin";
 import SecureRegister from "../pages/Secure/SecureRegister";
 import SecureLogin from "../pages/Secure/SecureLogin";
+import SecureProfile from "../pages/Secure/SecureProfile";
+import SecureDashboard from "../pages/Secure/SecureDashboard";
 
 
 const AppRoutes = () => {
@@ -24,6 +26,14 @@ const AppRoutes = () => {
             <Route path="/secure" element={<SecureHome />} />
             <Route path="/secure/register" element={<SecureRegister />} />
             <Route path="/secure/login" element={<SecureLogin />} />
+            <Route
+                path="/secure/profile"
+                element={<SecureProfile />}
+            />
+            <Route
+                path="/secure/dashboard"
+                element={<SecureDashboard />}
+            />
 
             {/* Comparison */}
             <Route path="/comparison" element={<Comparison />} />
