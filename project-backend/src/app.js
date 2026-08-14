@@ -1,22 +1,33 @@
 const express = require("express");
 const cors = require("cors");
+const cookieParser = require("cookie-parser");
 
 const connectDB = require("./config/db");
 const routes = require("./routes");
 
 const app = express();
 
-// middleware
-app.use(cors());
-app.use(express.json());
+// Middleware
+app.use(
+    cors({
+        origin: [
+            "http://localhost:5173",
+            "https://secure-auth-project-pi.vercel.app",
+        ],
+        credentials: true,
+    })
+);
 
-// DB connect
+app.use(express.json());
+app.use(cookieParser());
+
+// Database connection
 connectDB();
 
-// routes
+// Routes
 app.use("/api", routes);
 
-// test route
+// Test route
 app.get("/", (req, res) => {
     res.send("App working ✅");
 });

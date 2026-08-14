@@ -1,9 +1,21 @@
-node_modules
+# Dependencies
+node_modules/
+project-frontend/node_modules/
+project-backend/node_modules/
+
+# Environment variables
 .env
-dist
+project-frontend/.env
+project-backend/.env
 
-frontend/node_modules
-backend/node_modules
+# Production builds
+dist/
+project-frontend/dist/
+project-backend/dist/
 
-frontend/dist
-backend/dist
+# Logs
+*.log
+
+# OS and editor files
+.DS_Store
+.vscode/
